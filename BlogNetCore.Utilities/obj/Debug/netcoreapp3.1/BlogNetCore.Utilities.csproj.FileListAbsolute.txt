@@ -1,0 +1,13 @@
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\bin\Debug\netcoreapp3.1\BlogNetCore.Utilities.exe
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\bin\Debug\netcoreapp3.1\BlogNetCore.Utilities.deps.json
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\bin\Debug\netcoreapp3.1\BlogNetCore.Utilities.runtimeconfig.json
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\bin\Debug\netcoreapp3.1\BlogNetCore.Utilities.runtimeconfig.dev.json
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\bin\Debug\netcoreapp3.1\BlogNetCore.Utilities.dll
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\bin\Debug\netcoreapp3.1\BlogNetCore.Utilities.pdb
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\obj\Debug\netcoreapp3.1\BlogNetCore.Utilities.csprojAssemblyReference.cache
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\obj\Debug\netcoreapp3.1\BlogNetCore.Utilities.csproj.CoreCompileInputs.cache
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\obj\Debug\netcoreapp3.1\BlogNetCore.Utilities.AssemblyInfoInputs.cache
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\obj\Debug\netcoreapp3.1\BlogNetCore.Utilities.AssemblyInfo.cs
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\obj\Debug\netcoreapp3.1\BlogNetCore.Utilities.dll
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\obj\Debug\netcoreapp3.1\BlogNetCore.Utilities.pdb
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore.Utilities\obj\Debug\netcoreapp3.1\BlogNetCore.Utilities.genruntimeconfig.cache
