@@ -14,6 +14,6 @@ namespace BlogNetCore.Models
         public string Name { get; set; }
         [Required]
         [Display(Name = "Visualization Order")]
-        public string Sort { get; set; }
+        public int Sort { get; set; }
     }
 }

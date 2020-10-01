@@ -1,0 +1,47 @@
+﻿@model BlogNetCore.Models.Category;
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center">Edit Category</h3>
+
+<form method="post" asp-action="Edit">
+    <div class="row px-2 mx-2 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <div class="col-10 offset-1 mt-4">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Name"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Sort"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Sort" class="form-control" />
+                    <span asp-validation-for="Sort" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" aps-route-id="@Model.Id" class="btn btn-primary form-control">Update</button>
+                        </div>
+                        <div class="col">
+                            <a asp-action="index" class="btn btn-success form-control">Return to list</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

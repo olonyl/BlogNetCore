@@ -9,8 +9,8 @@ namespace BlogNetCore.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-        public DbSet<Category> Category;
-
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Article> Article{ get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

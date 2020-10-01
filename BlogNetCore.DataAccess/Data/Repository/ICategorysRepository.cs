@@ -9,6 +9,5 @@ namespace BlogNetCore.DataAccess.Data.Repository
     public interface ICategorysRepository: IRepository<Category>
     {
         IEnumerable<SelectListItem> GetCategoryList();
-        void Update(Category category);
     }
 }

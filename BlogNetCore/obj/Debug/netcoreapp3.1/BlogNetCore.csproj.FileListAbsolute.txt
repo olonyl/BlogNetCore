@@ -441,3 +441,9 @@ C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\bin\Debug\netcoreap
 C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\bin\Debug\netcoreapp3.1\BlogNetCore.DataAccess.pdb
 C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\bin\Debug\netcoreapp3.1\BlogNetCore.Models.pdb
 C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Index.cshtml.g.cs
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Create.cshtml.g.cs
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ViewCreateAndReturn.cshtml.g.cs
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Edit.cshtml.g.cs
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articles\Index.cshtml.g.cs
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articles\Create.cshtml.g.cs
