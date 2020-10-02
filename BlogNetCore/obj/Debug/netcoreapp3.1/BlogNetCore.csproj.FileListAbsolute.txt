@@ -447,3 +447,4 @@ C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreap
 C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Edit.cshtml.g.cs
 C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articles\Index.cshtml.g.cs
 C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articles\Create.cshtml.g.cs
+C:\Lab\Udemy\3 - Netcore\BlogNetCore\BlogNetCore\BlogNetCore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Articles\Edit.cshtml.g.cs

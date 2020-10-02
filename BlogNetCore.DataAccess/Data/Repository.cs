@@ -20,10 +20,6 @@ namespace BlogNetCore.DataAccess.Data
         {
             this.dbSet.Add(entity);
         }
-        public void Update(T entity)
-        {
-            this.dbSet.Update(entity);
-        }
         public T Get(int id)
         {
             return dbSet.Find(id);

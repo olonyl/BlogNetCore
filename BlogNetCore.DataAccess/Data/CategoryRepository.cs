@@ -22,6 +22,13 @@ namespace BlogNetCore.DataAccess.Data
                 Value = i.Id.ToString()
             });
         }
-     
+
+        public void Update(Category category)
+        {
+            var currentCategory = db.Category.FirstOrDefault(s => s.Id == category.Id);
+            currentCategory.Name = category.Name;
+            currentCategory.Sort = category.Sort;
+
+        }
     }
 }

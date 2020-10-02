@@ -24,6 +24,5 @@ namespace BlogNetCore.DataAccess.Data
         void Add(T entity);
         void Remove(int id);
         void Remove(T entity);
-        void Update(T entity);
     }
 }

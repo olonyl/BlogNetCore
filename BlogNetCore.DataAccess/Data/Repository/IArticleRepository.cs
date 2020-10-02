@@ -8,5 +8,6 @@ namespace BlogNetCore.DataAccess.Data.Repository
 {
     public interface IArticleRepository : IRepository<Article>
     {
+        void Update(Article article);
     }
 }
