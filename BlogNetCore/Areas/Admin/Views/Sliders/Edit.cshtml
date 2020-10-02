@@ -1,0 +1,71 @@
+﻿@model BlogNetCore.Models.Slider;
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+
+<h3 class="text-center">Edit Slider</h3>
+
+<form method="post" asp-action="Edit" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+    <div class="row px-2 mx-2 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-8 mt-4">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Name"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Status"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Status" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="UrlImage"></label>
+                </div>
+                <div class="col-8">
+                    <input type="file" name="files" id="uploadFile" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" aps-route-id="@Model.Id" class="btn btn-primary form-control">Update</button>
+                        </div>
+                        <div class="col">
+                            <a asp-action="index" class="btn btn-success form-control">Return to list</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 pt-3">
+            <img src="@Model.UrlImage" width="100%" style="border-radius: 5px; border: 1px solid #bbbpb9" />
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://cdn.tiny.cloud/1/rb3u2hod7503ss88y48pn1eyvlsa477ok4l8dzw8t9ph5r3w/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            toolbar_mode: 'floating',
+            menubar: 'file edit format'
+        });
+    </script>
+}

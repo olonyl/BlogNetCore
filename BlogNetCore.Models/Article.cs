@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
@@ -23,6 +24,7 @@ namespace BlogNetCore.Models
 
         [DataType(DataType.ImageUrl)]
         [Display(Name = "URL Image")]
+        [DefaultValue("")]
         public string UrlImage { get; set; }
 
         [Required]

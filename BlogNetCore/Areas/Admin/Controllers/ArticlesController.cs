@@ -50,14 +50,18 @@ namespace BlogNetCore.Areas.Admin.Controllers
                 var files = HttpContext.Request.Form.Files;
                 if (artilceVM.Article.Id == 0)
                 {
-                    string fileName = Guid.NewGuid().ToString();
-                    var upload = Path.Combine(mainURL,@"images\articles");
-                    var ext = Path.GetExtension(files[0].FileName);
-                    using (var fileStreams = new FileStream(Path.Combine(upload, $"{fileName}{ext}"), FileMode.Create))
+                    if (files.Count > 0)
                     {
-                        files[0].CopyTo(fileStreams);
+                        string fileName = Guid.NewGuid().ToString();
+                        var upload = Path.Combine(mainURL, @"images\articles");
+                        var ext = Path.GetExtension(files[0].FileName);
+                        using (var fileStreams = new FileStream(Path.Combine(upload, $"{fileName}{ext}"), FileMode.Create))
+                        {
+                            files[0].CopyTo(fileStreams);
+                        }
+                        artilceVM.Article.UrlImage = $@"\images\articles\{fileName}{ext}";
+
                     }
-                    artilceVM.Article.UrlImage = $@"\images\articles\{fileName}{ext}";
                     artilceVM.Article.CreationDate = DateTime.Now.ToString();
                     unitOfWork.Article.Add(artilceVM.Article);
                     unitOfWork.Save();
@@ -98,7 +102,8 @@ namespace BlogNetCore.Areas.Admin.Controllers
                     var upload = Path.Combine(mainURL, @"images\articles");
 
                     var newExt = Path.GetExtension(files[0].FileName);
-                    var editImageLocationURL = Path.Combine(mainURL, article.UrlImage.TrimStart('\\'));
+                    var fixedURL = article.UrlImage != null ? article.UrlImage : String.Empty;
+                    var editImageLocationURL = Path.Combine(mainURL, fixedURL.TrimStart('\\'));
 
                     if (System.IO.File.Exists(editImageLocationURL))
                         System.IO.File.Delete(editImageLocationURL);
@@ -131,17 +136,19 @@ namespace BlogNetCore.Areas.Admin.Controllers
         {
             var article = unitOfWork.Article.Get(id);
             string mainURL = webHostEnvironment.WebRootPath;
-            var editImageLocationURL = Path.Combine(mainURL, article.UrlImage.TrimStart('\\'));
-          
-
+        
             if (article == null) return Json(new { success = false, message = "Error deleting article" });
 
          
             unitOfWork.Article.Remove(article);
             unitOfWork.Save();
 
-            if (System.IO.File.Exists(editImageLocationURL))
-                System.IO.File.Delete(editImageLocationURL);
+            if (article.UrlImage != null)
+            {
+                var editImageLocationURL = Path.Combine(mainURL, article.UrlImage.TrimStart('\\'));
+                if (System.IO.File.Exists(editImageLocationURL))
+                    System.IO.File.Delete(editImageLocationURL);
+            }
 
             return Json(new { success = true, message = "Article deleted successfuly" });
 
