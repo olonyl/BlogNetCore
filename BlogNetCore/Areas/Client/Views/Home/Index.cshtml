@@ -1,8 +1,61 @@
-﻿@{
+﻿@model BlogNetCore.Models.ViewModels.HomeVM;
+
+@{
     ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to this Net Core 3.1 Course</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<header>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            @{ int count = 0; }
+            @foreach (var item in Model.Sliders)
+            {
+                var classItem = count++ == 0 ? "active" : "";
+                <div class="carousel-item  @classItem">
+                    <img src="@Url.Content(item.UrlImage)" class="d-block w-100"/>
+                    <h1 class="text-dark text-center">@Html.Raw(item.Name)</h1>
+                </div>
+
+            }
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</header>
+
+<div class="row background-title mt-5">
+    <div class="col-sm-12 py-5">
+        <h1 class="text-center text-white">Last Coureses and Tutorials</h1>
+    </div>
 </div>
+
+@if (Model.Articles.Count() > 0)
+{
+    <hr/>
+    <div class="row">
+        @foreach (var item in Model.Articles.OrderBy(o => o.Id))
+        {
+            <div class="col-4">
+                <div class="card">
+                    <img src="@item.UrlImage" class="img-thumbnail" width="100%"/>
+                    <div class="card-body">
+                        <h5 class="text-center">@item.Name</h5>
+                        <p>@item.CreationDate</p>
+                        <a asp-action="Detail" class="btn btn-success" style="border-radius: 2px" asp-route-id="@item.Id">More Information</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No articles to show</p>
+}
