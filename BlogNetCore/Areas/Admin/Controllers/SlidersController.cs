@@ -5,12 +5,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using BlogNetCore.DataAccess.Data.Repository;
 using BlogNetCore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogNetCore.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class SlidersController : Controller
     {
         private readonly IUnitOfWork unitOfWork;

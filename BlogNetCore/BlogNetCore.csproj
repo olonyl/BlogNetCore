@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BlogNetCore.DataAccess\BlogNetCore.DataAccess.csproj" />
     <ProjectReference Include="..\BlogNetCore.Models\BlogNetCore.Models.csproj" />
+    <ProjectReference Include="..\BlogNetCore.Utilities\BlogNetCore.Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -26,6 +26,7 @@
         "dependencies": {
           "BlogNetCore.DataAccess": "1.0.0",
           "BlogNetCore.Models": "1.0.0",
+          "BlogNetCore.Utilities": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.8",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.8",
           "Microsoft.AspNetCore.Identity.UI": "3.1.8",
@@ -2752,6 +2753,17 @@
         },
         "compile": {
           "BlogNetCore.Models.dll": {}
+        }
+      },
+      "BlogNetCore.Utilities/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "3.1.8"
+        },
+        "runtime": {
+          "BlogNetCore.Utilities.dll": {}
+        },
+        "compile": {
+          "BlogNetCore.Utilities.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery.Reference/3.1.0.0": {
@@ -5873,6 +5885,11 @@
       "sha512": ""
     },
     "BlogNetCore.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogNetCore.Utilities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

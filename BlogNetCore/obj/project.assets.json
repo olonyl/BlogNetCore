@@ -3441,6 +3441,22 @@
         "runtime": {
           "bin/placeholder/BlogNetCore.Models.dll": {}
         }
+      },
+      "BlogNetCore.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "3.1.8"
+        },
+        "compile": {
+          "bin/placeholder/BlogNetCore.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogNetCore.Utilities.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -10236,12 +10252,18 @@
       "type": "project",
       "path": "../BlogNetCore.Models/BlogNetCore.Models.csproj",
       "msbuildProject": "../BlogNetCore.Models/BlogNetCore.Models.csproj"
+    },
+    "BlogNetCore.Utilities/1.0.0": {
+      "type": "project",
+      "path": "../BlogNetCore.Utilities/BlogNetCore.Utilities.csproj",
+      "msbuildProject": "../BlogNetCore.Utilities/BlogNetCore.Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "BlogNetCore.DataAccess >= 1.0.0",
       "BlogNetCore.Models >= 1.0.0",
+      "BlogNetCore.Utilities >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.8",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.8",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.8",
@@ -10287,6 +10309,9 @@
             },
             "C:\\Lab\\Udemy\\3 - Netcore\\BlogNetCore\\BlogNetCore\\BlogNetCore.Models\\BlogNetCore.Models.csproj": {
               "projectPath": "C:\\Lab\\Udemy\\3 - Netcore\\BlogNetCore\\BlogNetCore\\BlogNetCore.Models\\BlogNetCore.Models.csproj"
+            },
+            "C:\\Lab\\Udemy\\3 - Netcore\\BlogNetCore\\BlogNetCore\\BlogNetCore.Utilities\\BlogNetCore.Utilities.csproj": {
+              "projectPath": "C:\\Lab\\Udemy\\3 - Netcore\\BlogNetCore\\BlogNetCore\\BlogNetCore.Utilities\\BlogNetCore.Utilities.csproj"
             }
           }
         }

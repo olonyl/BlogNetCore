@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using BlogNetCore.DataAccess.Data.Repository;
 using BlogNetCore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace BlogNetCore.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class CategoriesController : Controller
     {
         private readonly IUnitOfWork unitOfWork;

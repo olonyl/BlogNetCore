@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BlogNetCore.DataAccess.Data.Repository;
 using BlogNetCore.Models;
 using BlogNetCore.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.Differencing;
@@ -13,6 +14,7 @@ using Microsoft.CodeAnalysis.Differencing;
 namespace BlogNetCore.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class ArticlesController : Controller
     {
         private readonly IUnitOfWork unitOfWork;

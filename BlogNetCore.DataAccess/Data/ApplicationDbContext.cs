@@ -12,6 +12,8 @@ namespace BlogNetCore.DataAccess.Data
         public DbSet<Category> Category { get; set; }
         public DbSet<Article> Article{ get; set; }
         public DbSet<Slider> Slider { get; set; }
+        public DbSet<ApplicationUser> User { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
