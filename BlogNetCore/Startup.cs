@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using BlogNetCore.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using BlogNetCore.DataAccess.Data.Initializer;
 
 namespace BlogNetCore
 {
@@ -50,7 +51,7 @@ namespace BlogNetCore
             });
 
             services.AddSingleton<IEmailSender, EmailSender>();
-
+            services.AddScoped<IInitalizerDB, InitializerDB>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
          
@@ -58,7 +59,7 @@ namespace BlogNetCore
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IInitalizerDB initalizerDB)
         {
             if (env.IsDevelopment())
             {
@@ -86,6 +87,7 @@ namespace BlogNetCore
                     pattern: "{area=Client}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            initalizerDB.Initialize();
         }
     }
 }
