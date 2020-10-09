@@ -15,6 +15,12 @@ function loadDatatable() {
             { "data": "name", "width": "55%" },
             { "data": "status", "width": "15%" },
             {
+                "data": "urlImage",
+                "render": function (image) {
+                    return `<img src="../${image}" width='200px' />`
+                },
+            },
+            {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
